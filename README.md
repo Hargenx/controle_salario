@@ -100,16 +100,6 @@ No front-end, o objeto `Intl.NumberFormat` é utilizado para formatar os valores
 
 ---
 
-## Monetização
-
-Embora este projeto não implemente monetização diretamente, algumas estratégias para gerar receita a partir do acesso incluem:
-
-- Integração com redes de anúncios (como o Google AdSense).
-- Marketing de afiliados.
-- Modelos freemium ou de assinatura para acesso a funcionalidades avançadas.
-
----
-
 ## Contribuições
 
 Contribuições são bem-vindas! Se você deseja melhorar o projeto ou corrigir algum problema, sinta-se à vontade para:
@@ -128,4 +118,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ## Contato
 
-Para dúvidas ou sugestões, entre em contato pelo e-mail: [seuemail@dominio.com](mailto:seuemail@dominio.com)
+Para dúvidas ou sugestões, entre em contato pelo e-mail: [hargenx@hotmail.com](mailto:hargenx@hotmail.com)
