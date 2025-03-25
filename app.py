@@ -9,9 +9,7 @@ app = FastAPI(
     description="Calcula os salários semanais e mensais por campus com base na taxa de hora-aula e nas horas semanais trabalhadas.",
     version="1.0.0"
 )
-# Monta o diretório 'static' para servir arquivos estáticos.
-# O parâmetro html=True faz com que o arquivo index.html seja servido para requisições à raiz.
-app.mount("/", StaticFiles(directory="static", html=True), name="static")
+
 # Configuração do CORS
 app.add_middleware(
     CORSMiddleware,
@@ -73,3 +71,10 @@ def calcular_salario(data: SalaryInput) -> SalaryBreakdownOutput:
         overall_weekly_salary=overall_weekly_salary,
         overall_monthly_salary=overall_monthly_salary
     )
+# Monta o diretório 'static' para servir arquivos estáticos.
+# O parâmetro html=True faz com que o arquivo index.html seja servido para requisições à raiz.
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
+# Rota para servir o index.html na raiz
+@app.get("/")
+async def root():
+    return FileResponse("static/index.html")
