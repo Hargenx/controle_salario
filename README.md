@@ -35,9 +35,12 @@ Este projeto é uma aplicação simples que permite a um professor calcular seu 
 ```plaintext
 controle_salario/
 ├── app.py         # Código da API FastAPI
-├── index.html     # Página principal do front-end
-├── style.css      # Arquivo de estilos customizados (além do Bootstrap)
-└── script.js      # Lógica JavaScript para interação e consumo da API
+├── LICENSE        # Licença do projeto
+├── README.md      # Documentação do projeto
+└── static/        # Diretório para arquivos estáticos
+  ├── index.html     # Página principal do front-end
+  ├── style.css      # Arquivo de estilos customizados (além do Bootstrap)
+  └── script.js      # Lógica JavaScript para interação e consumo da API
 ```
 
 ---
