@@ -2,13 +2,16 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, PositiveFloat
 from typing import List
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(
     title="API de Controle de Salário para Professores",
     description="Calcula os salários semanais e mensais por campus com base na taxa de hora-aula e nas horas semanais trabalhadas.",
     version="1.0.0"
 )
-
+# Monta o diretório 'static' para servir arquivos estáticos.
+# O parâmetro html=True faz com que o arquivo index.html seja servido para requisições à raiz.
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
 # Configuração do CORS
 app.add_middleware(
     CORSMiddleware,
