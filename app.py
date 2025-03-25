@@ -77,4 +77,4 @@ app.mount("/", StaticFiles(directory="static", html=True), name="static")
 # Rota para servir o index.html na raiz
 @app.get("/")
 async def root():
-    return FileResponse("static/index.html")
+    return FileResponse("/static/index.html")
