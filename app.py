@@ -50,7 +50,7 @@ class SalaryBreakdownOutput(BaseModel):
     overall_monthly_salary: float = Field(..., description="Salário mensal total considerando todos os campi.")
 
 # Endpoint da API para cálculo de salário
-@app.post("/api/calcular-salario", response_model=SalaryBreakdownOutput, tags=["Salário"])
+@app.post("/calcular-salario", response_model=SalaryBreakdownOutput, tags=["Salário"])
 def calcular_salario(data: SalaryInput) -> SalaryBreakdownOutput:
     """
     Calcula o salário semanal e mensal para cada campus e o total geral,
