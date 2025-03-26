@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         try {
-            const apiUrl = '/api/calcular-salario';
+            const apiUrl = 'calcular-salario';
 
             const response = await fetch(apiUrl, {
                 method: 'POST',
