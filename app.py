@@ -65,8 +65,9 @@ def calcular_salario(data: SalaryInput) -> SalaryBreakdownOutput:
         for campus_data in data.campuses:
             weekly_hours = campus_data.hours
             weekly_salary = data.hourly_rate * weekly_hours
-            monthly_hours = weekly_hours * 4  # Aproximação de 4 semanas por mês
-            monthly_salary = weekly_salary * 4
+            monthly_hours = weekly_hours * 5.25
+            monthly_salary = data.hourly_rate * monthly_hours
+            # ou: monthly_salary = weekly_salary * 5.25
 
             overall_weekly_salary += weekly_salary
             overall_monthly_salary += monthly_salary
